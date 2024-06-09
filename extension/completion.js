@@ -6,7 +6,7 @@ ${message}
 
 [System] Please respond to the request.
 [System] If you use outside information in your response, please explicitly state so.
-[System] User's Webpage Context Follows:
+[System] User's webpage context follows:
 
 ${context}`;
 }
