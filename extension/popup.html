@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ask GPT about the text</title>
+        <style>
+            body {
+                background-color: #03212b;
+                color: white;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                padding: 20px;
+                width: 600px;
+                height: 400px;
+                box-sizing: border-box;
+            }
+
+            .userinput, textarea {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                width: 100%;
+                padding: 5px;
+                color: black;
+                border-radius: 7px;
+                border-width: 0px;
+            }
+
+            button {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                padding: 8px;
+                color: white;
+                margin-top: 10px;
+                background-color: #7a00cc;
+                border-radius: 7px;
+                border-width: 0px;
+            }
+        </style>
+
+        <script type="module" src="completion.js"></script>
+        <script type="module" src="popup.js"></script>
+    </head>
+    <body>
+        <h1>Ask a question about the text...</h1>
+        <h3>Input</h3>
+        <p>Note: Feel free to change the context. The size of the context corresponds with the size of the prompt and context.</p>
+        <button id="aiSelect">Currently using OpenAI (click to change)</button>
+        <form id="form" style="padding-bottom: 10px; padding-top: 10px">
+            <label for="message">Message</label>
+            <input class="userinput" type="text" id="message" placeholder="Ask the AI...">
+            <label for="context">Context</label><br>
+            <textarea id="context" class="userinput" placeholder="Context for the AI", style="height: 250px;"></textarea>
+            
+            <button type="submit">SUBMIT</button>
+        </form>
+
+        <div id="response">Response will appear here</div>
+
+        <h3>API Keys</h3>
+        <label for="showKeys">Show/Hide keys</label>
+        <input type="checkbox" id="showKeys">
+        <br>
+        <label for="openAIKey">OpenAI API Key</label>
+        <input type="password" id="openAIKey" placeholder="OpenAI API Key">
+        <br>
+        <label for="geminiKey">Gemini API Key</label>
+        <input type="password" id="geminiKey" placeholder="Gemini API Key">
+        <br>
+        <button id="saveButton">Save API Keys</button>
+        <p id="status"></p>
+    </body>
+</html>
